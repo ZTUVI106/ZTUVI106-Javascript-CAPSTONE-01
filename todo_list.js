@@ -88,7 +88,10 @@
 
 var myArr = [];
 
+
 function setAndShow() {
+
+
     var inpVal = document.getElementById('inp_box').value;
 
     myArr.push(inpVal);
