@@ -7,48 +7,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="todo_list.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="todo_list.js"></script>
 </head>
 
 <body>
-    <div class = "container">
-        <div class="todo_box">
-
-            <!-- ----------------------header starts---------------------------- -->
-            <div id="header">
-                <p id="head">TO-DO LIST</p>
-            </div>
-            <!-- ----------------------header ends---------------------------- -->
-
-
-
-            <!-- ----------------------input starts---------------------------- -->
-            <div id="input">
-                <!-- <form method="POST" action="#" id="inp_form"> -->
-                <input type="text" placeholder="  new task" id="inp_box"><button type="button" id="add_btn" onclick="setAndShow()">ADD</button>
-                <!-- </form> -->
-            </div>
-            <!-- ----------------------input ends---------------------------- -->
-
-
-
-            <!-- ----------------------list starts---------------------------- -->
-            <div id="list">
-                <div id="inner_list">
-                    <!-- <div class="lst_cntnr"> <div class="close"><p class="cross">X</p></div> <div class="check_list"><input type="checkbox" name="vehicle1" value="Bike" class="inp_bx" > <label class="strike">I have a bike</label></div></div><br>
-                    <div class="lst_cntnr"> <div class="close"><p class="cross">X</p></div> <div class="check_list"><input type="checkbox" name="vehicle1" value="Bike" class="inp_bx" > <label class="strike">I have a bike</label></div></div><br>
-                    <div class="lst_cntnr"> <div class="close"><p class="cross">X</p></div> <div class="check_list"><input type="checkbox" name="vehicle1" value="Bike" class="inp_bx" > <label class="strike">I have a bike</label></div></div><br> -->
-                </div>
-                <!-- ----------------------list ends---------------------------- -->
-
-                <input type="button" id="clear_btn" value=" Clear" onclick="clear_ls()">
-
-            </div>
+    <div class="container">
+<!-- ----------------header starts----------------------------  -->
+        <div class="header">
+            <p class="todo">TO DO LIST</p>
         </div>
-    </div>
+<!-- ----------------header ends----------------------------  -->
 
+<!-- ----------------input starts----------------------------  -->
+        <div class="inputBox">
+            <input type="text" id="vals" placeholder="new task">
+            <input type='button' onclick='psfun();' value='ADD' class="addBtn" />
+        </div>
+<!-- ----------------input ends----------------------------  -->
+
+<!-- ----------------output starts----------------------------  -->
+        <div class="outputBox">
+            <ul id="lst"> </ul>
+
+        </div>
+<!-- ----------------output ends----------------------------  -->
+
+<!-- ----------------clear starts----------------------------  -->
+        <div class="clear">
+            <button id="clearBtn" onclick='empty();'>Clear</button>
+        </div>
+
+    </div>
+<!-- ----------------clear ends----------------------------  -->
+
+
+
+
+    <script type="text/javascript" src='todo_list.js'></script>
 </body>
 
 </html>

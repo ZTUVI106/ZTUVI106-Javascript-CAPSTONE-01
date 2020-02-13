@@ -1,142 +1,273 @@
-
-
-
 body{
-    margin:1px;
+   margin:0;
+}
+.container {
+    background: url("depositphotos_313822890-stock-photo-empty-to-do-list-stationery.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 935px;
+    /* background-color: chocolate; */
 }
 
-
-
-.container{
-    float:left;
-    margin-top:0px;
-    height:935px;
-    width:100%;
-    background-color: rgb(172, 130, 123);
-    
-}
-.todo_box{
-    background-color:cadetblue;
-    /* border:1px solid red; */
-    height:55%;
-    width:25%;
-    margin-top: 8%;
-    margin-left: 40%;
-    border-radius: 5px;
-    
+/* ..........................head........................... */
+.header {
+    float: left;
+    /* background-color: red; */
+    width: 100%;
 }
 
-#header{
-    float:left;
-    /* border:1px solid blue; */
-    height:15%;
-    width:100%;
+.todo {
+    font-size: xx-large;
     text-align: center;
+    font-weight:bold;
 }
-#head{
-    /* float:left; */
-    color:white;
-    font-family: sans-serif;
-    font-size:x-large;
-     /* margin-top:25px;
-    margin-left:25px;   */
-    
-    
-    
+
+/* .......................inputBox......................... */
+.inputBox {
+    float: left;
+    width: 100%;
+    height: 8%;
+    background-color: #00000042;
 }
-#input{
-    float:left;
-    /* border:1px solid white; */
-    height:10%;
-    width:100%;
-}
-#list{
-    float:left;
-    /* border:1px solid yellow; */
-    margin-top:5%;
-    width:100%;
-    height:69%
-}
-#inner_list{
-    /* float:left; */
-    /* border:1px solid whitesmoke; */
-    height:85%;
-    width:80%;
-    margin-left: 10%;
-    margin-top: 4%;
-    overflow:hidden;
-    overflow-y: auto;
-    background-color: honeydew;
-}
-#inp_box{
-    background-color: darkorange;
-    border:none;
-    height: 51px;
-    width: 87%;
-    font-family: sans-serif;
-    font-size:17px;
-}
-#add_btn{
-    background-color: turquoise;
-    width: 13%;
-    border: none;
-    height: 52px;
-    color:blue;
-    font-family: sans-serif;
-    font-size: large;
-}
-.cross{
-    /* float:left; */
-    font-family: sans-serif;
-    background-color: red;
-    height: 18px;
-    width: 15px;
-    padding-left: 3px;
-    padding-top: 2px;
-    margin-top:5px;
-    cursor:pointer;
-}
-.inp_bx{
-    cursor: pointer;
-}
-.inp_bx:checked +.strike{
-    text-decoration: line-through;
-}
-ul li{
-    float:left;
-    cursor: pointer;
-    position: relative;
-    content='';
-    list-style-type: none;
-    color: white;
-    background-color: steelblue;
-    width: 80%;
-    /* border: solid red; */
-    padding: 10px;
+
+#vals {
+    /* border: 1px solid green; */
+    width: 98%;
+    height: 50%;
+    /* margin:auto; */
+    margin-top: 0.8%;
+    margin-left: 0.5%;
     font-size: 18px;
+    padding-left: 15px;
+
+}
+
+.addBtn {
+    border: none;
+    background-color: #ffffff;
+    width: 7%;
+    height: 4%;
+    display: inline;
+    position: absolute;
+    margin-left: -7.1%;
+    font-size: large;
+    cursor: pointer;
+    margin-top: 0.9%;
+}
+
+.addBtn:hover {
+    background-color: aquamarine;
+    border:2px solid rgb(60, 60, 185);
+    border-radius: 5px;
+}
+.outputBox {
+    float: left;
+    width: 100%;
+    height: auto;
+    /* background-color: teal; */
+    max-height: 500px;
+    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.clear {
+    float: left;
+    background-color: #00adffa8;
+    width: 100%;
+    height: 8%;
+}
+
+#clearBtn {
+    float: right;
+    border: none;
+    height: 80%;
+    width: 7%;
+    color: white;
+    background-color: cornflowerblue;
+    margin-right: 0.7%;
+    margin-top: 0.4%;
+    font-size: larger;
+    cursor: pointer;
+}
+
+#clearBtn:hover {
+
+    background-color: crimson
+}
+
+ul li {
+    width: 80%;
+    margin: auto;
+    list-style-type: none;
+    background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);
+    margin-top: 5px;
+    padding: 2px 0 2px 0;
+    font-size: larger;
+    margin-bottom: 5px;
+
 }
 ul li:hover{
-    background-color: rgb(9, 85, 146);
-}
-.check_list{
-    margin-top:6px;
-    display:flex;
-    cursor: pointer;
+    background: linear-gradient(to bottom right, #33ccff91 0%, #664857ad 100%);
+    color:white;
+    border-radius: 20px;;
 }
 
-ul li.checked{
-     float:left; 
+.checkBox:checked+label {
     text-decoration: line-through;
 }
-.list_display{
-    display:inline;
+
+
+
+button {
+    cursor: pointer;
+    margin-left: 20px;
+    color: white;
+    float: left;
+    background-color: red;
+    border: none;
+    margin-top: 0.1%;
 }
-.lst_cntnr{
-    display:inline-flex;
-    /* border-bottom: 1px solid red; */
+
+
+/* ..................responsive for max 1290px........................ */
+
+@media only screen and (max-width: 1290px){
+    #vals {
+        
+        width: 97%;
+        height: 65%;
+        margin: auto;
+        margin-top: 0.7%;
+        margin-left: 1%;
+        font-size: 18px;
+        padding-left: 15px;
+    }
+    #clearBtn{
+     
+        margin-right: 41%;
+        width: 11%;
+        margin-top: 0.5%;
+      }
+      .inputBox {
+           
+        height: 7%;
+        background-color: #00000042;
+    }
+    .addBtn{
+         
+        margin-left: -12%;
+        width: 12%;
+        height: 5%;
+        margin-top: 0.8%;
+    }
+} 
+
+/* ..................responsive for max 870px........................ */
+
+@media only screen and (max-width: 870px){
+    #vals {
+        
+        width: 95%;
+    height: 65%;
+    margin: auto;
+    margin-top: 0.7%;
+    margin-left: 1%;
+    font-size: 18px;
+    padding-left: 15px
+    }
+    #clearBtn{
+     
+        margin-right: 41%;
+        width: 14%;
+        margin-top: 0.5%
+      }
+      .inputBox {
+           
+        height: 7%;
+        background-color: #00000042;
+    }
+    .addBtn{
+         
+        margin-left: -16%;
+        width: 16%;
+        height: 5%;
+        margin-top: 1%;
+    }
+} 
+
+/* ..................responsive for max 590px........................ */
+
+@media only screen and (max-width: 590px) {
+    #clearBtn{
+     
+      margin-right: 33%;
+      width: 30%;
+      margin-top: 2%;
+    }
+    #vals {
+        
+    width: 95%;
+    height: 65%;
+    margin: auto;
+    margin-top: 0.7%;
+    margin-left: 1%;
+    font-size: 18px;
+    padding-left: 15px;
+    }
+    .addBtn{
+         
+        margin-left: -21.5%;
+        width: 20%;
+        height: 6%;
+        margin-top: 2.5%
+    }
+    .inputBox {
+           
+        height: 7%;
+        background-color: #00000042;
+    }
+ 
 }
-#clear_btn{
-    color:red;
-    float:right;
-    margin-right:10%;
+
+
+
+/* ..................responsive for max 590px........................ */
+
+@media only screen and (max-width: 590px) {
+    #clearBtn{
+     
+      margin-right: 33%;
+      width: 30%;
+      margin-top: 2%;
+    }
+    #vals {
+        
+        width: 94%;
+    height: 65%;
+    margin: auto;
+    margin-top: 1.7%;
+    margin-left: 1%;
+    font-size: 18px;
+    padding-left: 15px
+    }
+    .addBtn{
+         
+        margin-left: -20.5%;
+        width: 20%;
+        height: 5%;
+        margin-top: 2.2%;
+    }
+    .inputBox {
+           
+        height: 7%;
+        background-color: #00000042;
+    }
+ 
 }
+
+
+
